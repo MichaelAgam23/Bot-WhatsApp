@@ -1,0 +1,14 @@
+{
+"wait": "_Wait a minute_",
+"success": "Done...Jangam Lupa Subscribe Zero YT7",
+"wrongFormat": "Format salah, Silahkan Cek Lagi Di List Menu",
+"error": {
+"stick": "Sticker Salah Mohon Coba Lagi",
+"Iv": "Link Error Silahkan Ganti Yg Lain"
+},
+"only": {
+"group": "Khusus Di Group",
+"badmin": "Jadikan Bot Admin Dulu",
+"admin": "Khusus Admin Group"
+}
+}
