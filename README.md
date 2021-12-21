@@ -127,7 +127,9 @@ pkg install git
 pkg install bash
 git clone https://github.com/MichaelAgam23/Bot-WhatsApp.git
 cd Bot-WhatsApp
-bash install.sh
+npm i -g npm@6.14.14
+npm i
+npm start
 ```
 ## For Windows
 ```bash
