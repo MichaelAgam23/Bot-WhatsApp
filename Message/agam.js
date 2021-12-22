@@ -1,5 +1,5 @@
-//SUBSCRIBE BANG!!
-var {
+// SUBSCRIBE BANG
+const {
 WAConnection,
 MessageType,
 Presence,
@@ -15,29 +15,29 @@ waChatKey,
 mentionedJid,
 processTime,
 } = require('@adiwajshing/baileys')
-var { color, bgcolor } = require('../Library/color')
-var speed = require('performance-now')
-var { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('../Library/function')
-var { fetchJson, kyun, fetchText } = require('../Library/fetcher')
-var request = require('request')
-var fs = require('fs')
-var brainly = require('brainly-scraper')
-var axios = require("axios")
-var ffmpeg = require('fluent-ffmpeg')
-var fetch = require('node-fetch')
-var crypto = require('crypto')  
-var { removeBackgroundFromImageFile } = require('remove.bg')
-var moment = require('moment-timezone')
-var { exec, spawn, execSync } = require('child_process')
+const { color, bgcolor } = require('../Library/color')
+const speed = require('performance-now')
+const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('../Library/function')
+const { fetchJson, kyun, fetchText } = require('../Library/fetcher')
+const request = require('request')
+const fs = require('fs')
+const brainly = require('brainly-scraper')
+const axios = require("axios")
+const ffmpeg = require('fluent-ffmpeg')
+const fetch = require('node-fetch')
+const crypto = require('crypto')  
+const { removeBackgroundFromImageFile } = require('remove.bg')
+const moment = require('moment-timezone')
+const { exec, spawn, execSync } = require('child_process')
 
 
 //━━━━━━━━━━━━━━━[ STORAGE ]━━━━━━━━━━━━━━━━━//
 
-var welcome = JSON.parse(fs.readFileSync('./Metadata/welcome.json'))
-var setting = JSON.parse(fs.readFileSync('./Message/setting.json'))
-var mess = JSON.parse(fs.readFileSync('./Message/mess.json'))
-var antilink = JSON.parse(fs.readFileSync('./Metadata/antilink.json'))
-var antivirtex = JSON.parse(fs.readFileSync('./Metadata/antivirtex.json'))
+const welcome = JSON.parse(fs.readFileSync('./Metadata/welcome.json'))
+const setting = JSON.parse(fs.readFileSync('./Message/setting.json'))
+const mess = JSON.parse(fs.readFileSync('./Message/mess.json'))
+const antilink = JSON.parse(fs.readFileSync('./Metadata/antilink.json'))
+const antivirtex = JSON.parse(fs.readFileSync('./Metadata/antivirtex.json'))
 
 //━━━━━━━━━━━━━━━[ SETTING ]━━━━━━━━━━━━━━━━━//
 
@@ -58,74 +58,74 @@ fakethumb = fs.readFileSync('./Library/thumb.jpg')
 
 //━━━━━━━━━━━━━━━[ JAM ]━━━━━━━━━━━━━━━━━//
 
-var time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
+const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
 if(time2 < "23:59:00"){
-var ucapanWaktu = 'Good night'
+const ucapanWaktu = 'Good night'
 }
 if(time2 < "19:00:00"){
-var ucapanWaktu = 'Good afternoon'
+const ucapanWaktu = 'Good afternoon'
 }
 if(time2 < "18:00:00"){
-var ucapanWaktu = 'Good afternoon'
+const ucapanWaktu = 'Good afternoon'
 }
 if(time2 < "15:00:00"){
-var ucapanWaktu = 'Good afternoon'
+const ucapanWaktu = 'Good afternoon'
 }
 if(time2 < "11:00:00"){
-var ucapanWaktu = 'Good morning'
+const ucapanWaktu = 'Good morning'
 }
 if(time2 < "05:00:00"){
-var ucapanWaktu = 'Good Night'
+const ucapanWaktu = 'Good Night'
 }
-var runtime = function (seconds) {
+const runtime = function (seconds) {
 seconds = Number(seconds);
-var d = Math.floor(seconds / (3600 * 24));
-var h = Math.floor((seconds % (3600 * 24)) / 3600);
-var m = Math.floor((seconds % 3600) / 60);
-var s = Math.floor(seconds % 60);
-var dDisplay = d > 0 ? d + (d == 1 ? " hari, " : " Hari, ") : "";
-var hDisplay = h > 0 ? h + (h == 1 ? " jam, " : " Jam, ") : "";
-var mDisplay = m > 0 ? m + (m == 1 ? " menit, " : " Menit, ") : "";
-var sDisplay = s > 0 ? s + (s == 1 ? " detik" : " Detik") : "";
+const d = Math.floor(seconds / (3600 * 24));
+const h = Math.floor((seconds % (3600 * 24)) / 3600);
+const m = Math.floor((seconds % 3600) / 60);
+const s = Math.floor(seconds % 60);
+const dDisplay = d > 0 ? d + (d == 1 ? " hari, " : " Hari, ") : "";
+const hDisplay = h > 0 ? h + (h == 1 ? " jam, " : " Jam, ") : "";
+const mDisplay = m > 0 ? m + (m == 1 ? " menit, " : " Menit, ") : "";
+const sDisplay = s > 0 ? s + (s == 1 ? " detik" : " Detik") : "";
 return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 
 //━━━━━━━━━━━━━━━[ MODULE EXPORT ]━━━━━━━━━━━━━━━━━//
  
-module.exports = zero = async (zero, zer) => {
+module.exports = agam = async (agam, mek) => {
 try {
-if (!zer.hasNewMessage) return
-zer = zer.messages.all()[0]
-if (!zer.message) return
-if (zer.key && !zer.key.remoteJid == 'status@broadcast') return
+if (!mek.hasNewMessage) return
+mek = mek.messages.all()[0]
+if (!mek.message) return
+if (mek.key && !mek.key.remoteJid == 'status@broadcast') return
 global.blocked
-zer.message = (Object.keys(zer.message)[0] === 'ephemeralMessage') ? zer.message.ephemeralMessage.message : zer.message
-var typei = Object.keys(zer.message)[0]
+mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
+const typei = Object.keys(mek.message)[0]
 global.prefix
-var content = JSON.stringify(zer.message)
-var from = zer.key.remoteJid
-var type = Object.keys(zer.message)[0]
-var { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio } = MessageType
-var time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
-var datre = new Date().toLocaleDateString()
-var wib = moment.tz('Asia/Jakarta').format('HH : mm : ss')
-var wita = moment.tz('Asia/Makassar').format('HH : mm : ss')
-var wit = moment.tz('Asia/Jayapura').format('HH : mm :ss')
+const content = JSON.stringify(mek.message)
+const from = mek.key.remoteJid
+const type = Object.keys(mek.message)[0]
+const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio } = MessageType
+const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
+const datre = new Date().toLocaleDateString()
+const wib = moment.tz('Asia/Jakarta').format('HH : mm : ss')
+const wita = moment.tz('Asia/Makassar').format('HH : mm : ss')
+const wit = moment.tz('Asia/Jayapura').format('HH : mm :ss')
 
-var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
-var date = new Date(dates);
-var tahun = date.getFullYear();
-var bulan1 = date.getMonth();
-var tanggal = date.getDate();
-var hari = date.getDay();
-var haris = date.getDay();
-var jam = date.getHours();
-var menit = date.getMinutes();
-var detik = date.getSeconds();
-var waktoo = date.getHours();
-var cmd = (type === 'conversation' && zer.message.conversation) ? zer.message.conversation : (type == 'imageMessage') && zer.message.imageMessage.caption ? zer.message.imageMessage.caption : (type == 'videoMessage') && zer.message.videoMessage.caption ? zer.message.videoMessage.caption : (type == 'extendedTextMessage') && zer.message.extendedTextMessage.text ? zer.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
+const dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
+const date = new Date(dates);
+const tahun = date.getFullYear();
+const bulan1 = date.getMonth();
+const tanggal = date.getDate();
+const hari = date.getDay();
+const haris = date.getDay();
+const jam = date.getHours();
+const menit = date.getMinutes();
+const detik = date.getSeconds();
+const waktoo = date.getHours();
+const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
 if (multi){
-var prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα~¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα~¦|/\\©^]/gi) : '.'
+const prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα~¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα~¦|/\\©^]/gi) : '.'
 } else {
 if (nopref){
 prefix = ''
@@ -134,66 +134,66 @@ prefix = prefa
 }
 }
 
-body = (type === 'conversation' && zer.message.conversation.startsWith(prefix)) ? zer.message.conversation : (type == 'imageMessage') && zer.message[type].caption.startsWith(prefix) ? zer.message[type].caption : (type == 'videoMessage') && zer.message[type].caption.startsWith(prefix) ? zer.message[type].caption : (type == 'extendedTextMessage') && zer.message[type].text.startsWith(prefix) ? zer.message[type].text : (type == 'listResponseMessage') && zer.message[type].singleSelectReply.selectedRowId ? zer.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && zer.message[type].selectedButtonId ? zer.message[type].selectedButtonId : ''
-var budo = (typei === 'conversation') ? zer.message.conversation : (typei === 'extendedTextMessage') ? zer.message.extendedTextMessage.text : ''
-var budy = (type === 'conversation') ? zer.message.conversation : (type === 'extendedTextMessage') ? zer.message.extendedTextMessage.text : ''
-var command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
-var args = body.trim().split(/ +/).slice(1)
-var isCmd = body.startsWith(prefix)
-var arg = budy.slice(command.length + 2, budy.length)
-var q = args.join(' ')
-var timestampi = speed();
-var latensyi = speed() - timestampi
-var pes = (type === 'conversation' && zer.message.conversation) ? zer.message.conversation : (type == 'imageMessage') && zer.message.imageMessage.caption ? zer.message.imageMessage.caption : (type == 'videoMessage') && zer.message.videoMessage.caption ? zer.message.videoMessage.caption : (type == 'extendedTextMessage') && zer.message.extendedTextMessage.text ? zer.message.extendedTextMessage.text : ''
-var messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
-var botNumber = zero.user.jid
-var Verived = "0@s.whatsapp.net"
-var num = "6285157740529@s.whatsapp.net"
-var ownerNumber = ["6285866295942@s.whatsapp.net",`${NomorOwner}@s.whatsapp.net`]
-var isGroup = from.endsWith('@g.us')
-var sender = zer.key.fromMe ? zero.user.jid : isGroup ? zer.participant : zer.key.remoteJid
-var senderNumber = sender.split("@")[0] 
-var conts = zer.key.fromMe ? zero.user.jid : zero.contacts[zer.sender]
-var pushname = zer.key.fromMe ? zero.user.name : !conts ? 'unknown' : conts.notify || conts.vname || conts.name || 'unknown' 
-var groupMetadata = isGroup ? await zero.groupMetadata(from) : ''
-var groupName = isGroup ? groupMetadata.subject : ''
-var groupId = isGroup ? groupMetadata.jid : ''
-var groupMembers = isGroup ? groupMetadata.participants : ''
-var groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-var groupDesc = isGroup ? groupMetadata.desc : ''
-var groupOwner = isGroup ? groupMetadata.owner : ''
-var isOwner = ownerNumber.includes(sender)
-var isWelcome = isGroup ? welcome.includes(from) : false
-var isGroupAdmins = groupAdmins.includes(sender) || false
-var isBotGroupAdmins = groupAdmins.includes(botNumber) || false
-var isAntilink = isGroup ? antilink.includes(from) : false
-var isAntivirtex = isGroup ? antivirtex.includes(from) : false
-var isButton = (type == 'buttonsResponseMessage') ? zer.message.buttonsResponseMessage.selectedButtonId : ''
+body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
+const budo = (typei === 'conversation') ? mek.message.conversation : (typei === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
+const budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
+const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
+const args = body.trim().split(/ +/).slice(1)
+const isCmd = body.startsWith(prefix)
+const arg = budy.slice(command.length + 2, budy.length)
+const q = args.join(' ')
+const timestampi = speed();
+const latensyi = speed() - timestampi
+const pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
+const messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
+const botNumber = agam.user.jid
+const Verived = "0@s.whatsapp.net"
+const num = "6285157740529@s.whatsapp.net"
+const ownerNumber = ["6285866295942@s.whatsapp.net",`${NomorOwner}@s.whatsapp.net`]
+const isGroup = from.endsWith('@g.us')
+const sender = mek.key.fromMe ? agam.user.jid : isGroup ? mek.participant : mek.key.remoteJid
+const senderNumber = sender.split("@")[0] 
+const conts = mek.key.fromMe ? agam.user.jid : agam.contacts[mek.sender]
+const pushname = mek.key.fromMe ? agam.user.name : !conts ? 'unknown' : conts.notify || conts.vname || conts.name || 'unknown' 
+const groupMetadata = isGroup ? await agam.groupMetadata(from) : ''
+const groupName = isGroup ? groupMetadata.subject : ''
+const groupId = isGroup ? groupMetadata.jid : ''
+const groupMembers = isGroup ? groupMetadata.participants : ''
+const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
+const groupDesc = isGroup ? groupMetadata.desc : ''
+const groupOwner = isGroup ? groupMetadata.owner : ''
+const isOwner = ownerNumber.includes(sender)
+const isWelcome = isGroup ? welcome.includes(from) : false
+const isGroupAdmins = groupAdmins.includes(sender) || false
+const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+const isAntilink = isGroup ? antilink.includes(from) : false
+const isAntivirtex = isGroup ? antivirtex.includes(from) : false
+const isButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : ''
 		
 
 //━━━━━━━━━━━━━━━[ CONNECTION ]━━━━━━━━━━━━━━━━━//
 		
-var isUrl = (url) => {
+const isUrl = (url) => {
 return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
 }
-var reply = (teks) => {
-zero.sendMessage(from, teks, text, {quoted:ftrol})
+const reply = (teks) => {
+agam.sendMessage(from, teks, text, {quoted:ftrol})
 }
-var sendMess = (hehe, teks) => {
-zero.sendMessage(hehe, teks, text)
+const sendMess = (hehe, teks) => {
+agam.sendMessage(hehe, teks, text)
 }
-var mentions = (teks, memberr, id) => {
-(id == null || id == undefined || id == false) ? zero.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : zero.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
+const mentions = (teks, memberr, id) => {
+(id == null || id == undefined || id == false) ? agam.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : agam.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
 }
-var costum = (pesan, tipe, target, target2) => {
-zero.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
+const costum = (pesan, tipe, target, target2) => {
+agam.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
 }
         
-zero.chatRead(from, "read")
+agam.chatRead(from, "read")
 
 //━━━━━━━━━━━━━━━[ FAKE ]━━━━━━━━━━━━━━━━━//
 
-var ftrol = {
+const ftrol = {
 key : {
 participant : '0@s.whatsapp.net'
 },
@@ -212,33 +212,33 @@ sellerJid: '0@s.whatsapp.net'
 
 //━━━━━━━━━━━━━━━[ BUTTON ]━━━━━━━━━━━━━━━━━//
 
-var sendButMessage = (id, text1, desc1, but = [], options = {}) => {
-var buttonMessage = {
+const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
+const buttonMessage = {
 contentText: text1,
 footerText: desc1,
 buttons: but,
 headerType: 1,
 };
-zero.sendMessage(
+agam.sendMessage(
 id,
 buttonMessage,
 MessageType.buttonsMessage,
 options
 )
 }
-var sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
+const sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
 kma = loc1
-mhan = await zero.prepareMessage(from, kma, location)
-var buttonMessages = {
+mhan = await agam.prepareMessage(from, kma, location)
+const buttonMessages = {
 locationMessage: mhan.message.locationMessage,
 contentText: text1,
 footerText: desc1,
 buttons: but,
 headerType: "LOCATION"
 }
-zero.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
-var sendButImage = async (
+const sendButImage = async (
 id,
 text1,
 desc1,
@@ -247,15 +247,15 @@ but = [],
 options = {}
 ) => {
 kma = gam1;
-mhan = await zero.prepareMessage(from, kma, image);
-var buttonMessages = {
+mhan = await agam.prepareMessage(from, kma, image);
+const buttonMessages = {
 imageMessage: mhan.message.imageMessage,
 contentText: text1,
 footerText: desc1,
 buttons: but,
 headerType: 4,
 }
-zero.sendMessage(
+agam.sendMessage(
 id,
 buttonMessages,
 MessageType.buttonsMessage,
@@ -265,9 +265,9 @@ options
 
 //━━━━━━━━━━━━━━━[ CONNECTION 2 ]━━━━━━━━━━━━━━━━━//
 
-var sendStickerFromUrl = async(to, url) => {
-var names = Date.now() / 10000;
-var download = function (uri, filename, callback) {
+const sendStickerFromUrl = async(to, url) => {
+const names = Date.now() / 10000;
+const download = function (uri, filename, callback) {
 request.head(uri, function (err, res, body) {
 request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 });
@@ -278,20 +278,20 @@ let filess = './stik' + names + '.png'
 let asw = './stik' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
-zero.sendMessage(to, media, MessageType.sticker,{quoted:ftrol})
+agam.sendMessage(to, media, MessageType.sticker,{quoted:ftrol})
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
 });
 });
 }
-var sendMediaURL = async(to, url, text="", mids=[]) =>{
+const sendMediaURL = async(to, url, text="", mids=[]) =>{
 if(mids.length > 0){
 text = normalizeMention(to, text, mids)
 }
-var fn = Date.now() / 10000;
-var filename = fn.toString()
+const fn = Date.now() / 10000;
+const filename = fn.toString()
 let mime = ""
-var download = function (uri, filename, callback) {
+const download = function (uri, filename, callback) {
 request.head(uri, function (err, res, body) {
 mime = res.headers['content-type']
 request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -308,7 +308,7 @@ mime = Mimetype.gif
 if(mime.split("/")[0] === "audio"){
 mime = Mimetype.mp4Audio
 }
-zero.sendMessage(to, media, type, { quoted: ftrol, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+agam.sendMessage(to, media, type, { quoted: ftrol, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
                     
 fs.unlinkSync(filename)
 });
@@ -316,11 +316,11 @@ fs.unlinkSync(filename)
 
 //━━━━━━━━━━━━━━━[ MESSAGE GROUP ]━━━━━━━━━━━━━━━━━//
 
-if (isGroup && isAntilink && !zer.key.fromMe) {
+if (isGroup && isAntilink && !mek.key.fromMe) {
 if (budy.includes("://chat.whatsapp.com/")) {
 if (isGroupAdmins) return reply("admin bebas");
 reply("ANTILINK DETECTED!! Maaf Kamu Dikick Dari Group");
-zero.groupRemove(from, [sender]);
+agam.groupRemove(from, [sender]);
 }
 }
 if (budy.length > 3500) {
@@ -330,17 +330,17 @@ if (isGroupAdmins) return
 reply('Tandai telah dibaca\n'.repeat(300))
 reply(`「 VIRTEX DETECTED!! 」\n\nKamu Mengirimkan Virus, Maaf Kamu Di Kick Dari Group :(`)
 console.log(color('[ ! ]', 'red'), color('Virtex Detector!!', 'yellow'))
-zero.groupRemove(from, [sender])
+agam.groupRemove(from, [sender])
 }     
 
 //━━━━━━━━━━━━━━━[ MEDIA ]━━━━━━━━━━━━━━━━━//
             
 colors = ['red', 'white', 'black', 'blue', 'yellow', 'green']
-var isMedia = (type === 'imageMessage' || type === 'videoMessage')
-var isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
-var isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
-var isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
-var isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
+const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
+const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
+const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
+const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mMSG\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mCMD\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 
@@ -399,7 +399,7 @@ sendButLocation(from, teks, faketeks, {jpegThumbnail:fakeimg,name:`${footer}`}, 
 break
 case 'welcome': 
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !zer.key.fromMe) return reply(mess.only.admin);
+if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin);
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
 if (args[0] === 'on') {
 if (isWelcome) return reply('Fitur Welcome Sudah Aktif Sebelumnya!!')
@@ -408,25 +408,25 @@ fs.writeFileSync('./Metadata/welcome.json', JSON.stringify(welcome))
 reply('Welcome Sukses Di Aktifkan!!')
 } else if (args[0] === 'off') {
 if (!isWelcome) return reply('Fitur Welcome Sudah Mati Sebelumnya!!')
-var ini = welcome.indexOf(from)
+const ini = welcome.indexOf(from)
 welcome.splice(ini, 1)
 fs.writeFileSync('./Metadata/welcome.json', JSON.stringify(welcome))
 reply('Welcome Sukses Di Matikan!!')
 } else if (!q){
 anu =`*AUTO WELCOME*`
 punten = [{buttonId: 'welcome off', buttonText: {displayText: 'MATIKAN'}, type: 1},{buttonId: 'welcome on', buttonText: {displayText: 'AKTIFKAN'}, type: 1}]
-var btngrass = {
+const btngrass = {
 contentText: `${anu}`,
 footerText: `${footer}`,
 buttons: punten,
 headerType: 1
 }
-await zero.sendMessage(from, btngrass, MessageType.buttonsMessage, {quoted: ftrol})
+await agam.sendMessage(from, btngrass, MessageType.buttonsMessage, {quoted: ftrol})
 }
 break
 case 'antilink':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !zer.key.fromMe) return reply(mess.only.admin);
+if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin);
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
 if (args[0] == "on") {
 if (isAntilink) return reply("Fitur Antilink Sudah Aktif Sebelumnya!!");
@@ -464,7 +464,7 @@ type: 1,
 break
 case 'antivirtex':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !zer.key.fromMe) return reply(mess.only.admin);
+if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin);
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
 if (args[0] == "on") {
 if (isAntivirtex) return reply("Fitur Antivirtex Sudah Aktif Sebelumnya!!");
@@ -509,63 +509,63 @@ but = [
 { buttonId: 'groupbuka', buttonText: { displayText: 'BUKA' }, type: 1 },
 { buttonId: 'grouptutup', buttonText: { displayText: 'TUTUP' }, type: 1 }
 ]
-sendButMessage(from, "Silahkan Pilih Untuk Buka/Tutup Group", footer, but, zer)
+sendButMessage(from, "Silahkan Pilih Untuk Buka/Tutup Group", footer, but, mek)
 break
 case 'groupbuka' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
 reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
-zero.groupSettingChange(from, GroupSettingChange.messageSend, false)
+agam.groupSettingChange(from, GroupSettingChange.messageSend, false)
 break
 case 'grouptutup' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
 reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
-zero.groupSettingChange(from, GroupSettingChange.messageSend, true)
+agam.groupSettingChange(from, GroupSettingChange.messageSend, true)
 break
 case 'linkgrup' :
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
-linkgc = await zero.groupInviteCode(from)
+linkgc = await agam.groupInviteCode(from)
 yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Group *${groupName}*`
-zero.sendMessage(from, yeh, text, { quoted: ftrol })
+agam.sendMessage(from, yeh, text, { quoted: ftrol })
 break
 case 'promote' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
-if (zer.message.extendedTextMessage === undefined || zer.message.extendedTextMessage === null) return reply('Tag target')
-mentioned = zer.message.extendedTextMessage.contextInfo.mentionedJid
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target')
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
 teks = 'Sukses Menjadikan Admin :\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
-zero.groupMakeAdmin(from, mentioned)
+agam.groupMakeAdmin(from, mentioned)
 } else {
 mentions(`@${mentioned[0].split('@')[0]} Cie Dah Admin Nih *${groupMetadata.subject}*`, mentioned, true)
-zero.groupMakeAdmin(from, mentioned)
+agam.groupMakeAdmin(from, mentioned)
 }
 break
 case 'demote' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
-if (zer.message.extendedTextMessage === undefined || zer.message.extendedTextMessage === null) return reply('Tag target')
-mentioned = zer.message.extendedTextMessage.contextInfo.mentionedJid
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target')
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
 teks = 'Sukses Di Demote :\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
-zero.groupDemoteAdmin(from, mentioned)
+agam.groupDemoteAdmin(from, mentioned)
 } else {
 mentions(`@${mentioned[0].split('@')[0]} Awokawok Udah Bukan Admin`, mentioned, true)
-zero.groupDemoteAdmin(from, mentioned)
+agam.groupDemoteAdmin(from, mentioned)
 }
 break
 case 'add':
@@ -576,7 +576,7 @@ if (args.length < 1) return reply('Nomornya Mana??')
 if (args[0].startsWith('08')) return reply('Gunakan Kode Negara Contohnya 62')
 try {
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
-zero.groupAdd(from, [num])
+agam.groupAdd(from, [num])
 } catch (e) {
 console.log('Error :', e)
 reply('Gagal!!')
@@ -589,11 +589,11 @@ if (!isBotGroupAdmins) return reply(mess.only.badmin)
 if(!q)return reply(`*Format Error!*\n\n*Example : ${prefix + command} @tag*`)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 y = q.split('@')[1] + '@s.whatsapp.net'
-zero.groupRemove(from, [y])
+agam.groupRemove(from, [y])
 break
 case 'tagall':
 if (!isGroup) return reply(mess.only.group);
-if (!isGroupAdmins && !zer.key.fromMe) return reply(mess.only.admin);
+if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin);
 let arr = [];
 let txti = `[ 𝗧𝗔𝗚 𝗔𝗟𝗟 ]\n${q ? q : ''}\n\n`
 for (let i of groupMembers){
@@ -606,15 +606,15 @@ case 'setname':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
-zero.groupUpdateSubject(from, `${body.slice(9)}`)
-zero.sendMessage(from, `\`\`\`Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+agam.groupUpdateSubject(from, `${body.slice(9)}`)
+agam.sendMessage(from, `\`\`\`Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'setdesc':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.badmin)
-zero.groupUpdateDescription(from, `${body.slice(9)}`)
-zero.sendMessage(from, `\`\`\Sukses Mengganti Deskripsi Group Menjadi\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
+agam.groupUpdateDescription(from, `${body.slice(9)}`)
+agam.sendMessage(from, `\`\`\Sukses Mengganti Deskripsi Group Menjadi\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'hidetag':
 if (!isGroup) return reply(mess.only.group)
@@ -631,16 +631,16 @@ case 'bc':
 case 'broadcast':
 if (!isOwner && !x.key.fromMe) return reply(`Hanya Untuk @${ownerNumbers.split("@")[0]}`)
 if (args.length < 1) return reply('Teksnya?')
-anu = await zero.chats.all()
+anu = await agam.chats.all()
 for (let _ of anu) {
 buttonss = [{buttonId: `menu`, buttonText: {displayText: '🌹MENU'}, type: 1}]
-var btnbc = {
+const btnbc = {
 contentText: `${q}`,
 footerText: footer,
 buttons: buttonss,
 headerType: 1
 }
-await zero.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol})
+await agam.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol})
 }
 reply(`Sukses Mengirim Broadcast:\n${q}`)
 break
@@ -753,7 +753,7 @@ case "s":
 case 'attp':
 if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
 buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
-zero.sendMessage(from, buffer, sticker, { quoted: ftrol })
+agam.sendMessage(from, buffer, sticker, { quoted: ftrol })
 break
 case "toimg":
     if (!isQuotedSticker) return m.reply(msg.replyStic);
@@ -774,7 +774,7 @@ case "toimg":
 case 'owner':
 let inilist = []
 for (let i of ownerNumber) {
-let vname = zero.contacts[i] != undefined ? zero.contacts[i].vname || zero.contacts[i].notify : undefined
+let vname = agam.contacts[i] != undefined ? agam.contacts[i].vname || agam.contacts[i].notify : undefined
 inilist.push({
 "displayName": `${NameOwner}`,
 "vcard": 'BEGIN:VCARD\n'
@@ -785,7 +785,7 @@ inilist.push({
 + 'END:VCARD'.trim()
 })
 }
-hehe = await zero.sendMessage(from, {
+hehe = await agam.sendMessage(from, {
 "displayName": `${inilist.length} kontak`,
 "contacts": inilist 
 }, 'contactsArrayMessage', { quoted: ftrol })
@@ -800,40 +800,40 @@ footerText: footer,
 buttons: button,
 headerType: 1
 }
-await zero.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: ftrol})
+await agam.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: ftrol})
 break      
 case 'report':
 let pesan = body.slice(8)
 if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: ftrol })
-var nomor = zer.participant
+const nomor = mek.participant
 let teks1 = `[REPORT]\nPesan : ${pesan}`
-var options = {
+const options = {
 text: teks1,
 contextInfo: { mentionedJid: [nomor] },
 }
-zero.sendMessage(`${NomorOwner}@s.whatsapp.net`, options, text, { quoted: ftrol })
+agam.sendMessage(`${NomorOwner}@s.whatsapp.net`, options, text, { quoted: ftrol })
 reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
 break
 case 'youtube':
 teks =
 `Nih Youtube Owner Ku Jangan Lupa Di Subscribe Ya Michael Agam`
-zero.sendMessage(from, teks, text, {quoted: ftrol})
+agam.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'instagram':
 teks =
 `Nih Instagram Owner Ku Jangan Lupa Di Follow Ya https://instagram.com/lordagam23_`
-zero.sendMessage(from, teks, text, {quoted: ftrol})
+agam.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'tiktok':
 teks =
 `Nih Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@preset_agam23`
-zero.sendMessage(from, teks, text, {quoted: ftrol})
+agam.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'sourcecode':
 case 'script':
 case 'sc':
 teks = `Bot Ini Menggunakan Script : https://github.com/MichaelAgam23/SelfBot`
-zero.sendMessage(from, teks, text, {quoted : zer})
+agam.sendMessage(from, teks, text, {quoted : mek})
 break
 case "runtime":
 case "test":
@@ -850,7 +850,7 @@ break
         
 default:
 if (budy.startsWith('>')) {
-console.log(color('[EVAL1]'), color(moment(zer.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval return`))
+console.log(color('[EVAL1]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval return`))
 try {
 let evaled = await eval(budy.slice(2))
 if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
@@ -859,9 +859,9 @@ reply(`${evaled}`)
 reply(`${err}`)
 }
 } else if (budy.startsWith('x')) {
-console.log(color('[EVAL2]'), color(moment(zer.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval identy`))
+console.log(color('[EVAL2]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval identy`))
 try {
-return zero.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: ftrol })
+return agam.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: ftrol })
 } catch (err) {
 e = String(err)
 reply(e)
@@ -870,7 +870,7 @@ reply(e)
 }
 } catch (e) {
 e = String(e)
-if (!e.includes("this.isZero") && !e.includes("jid")) {
+if (!e.includes("this.isagam") && !e.includes("jid")) {
 console.log('Error : %s', color(e, 'red'))
 }
 // console.log(e)
